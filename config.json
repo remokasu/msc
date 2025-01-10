@@ -1,0 +1,56 @@
+{
+    "server": {
+        "dir": "/opt/minecraft",
+        "jar": "minecraft_server_1.21.4.jar",
+        "java_path": "/usr/bin/java",
+        "max_memory": "4G",
+        "screen_name": "minecraft"
+    },
+    "lock": {
+        "file": "/var/run/minecraft-control.lock"
+    },
+    "backup": {
+        "dest": "/opt/backup/minecraft",
+        "items": [
+            "/opt/minecraft/world",
+            "/opt/minecraft/server.properties",
+            "/opt/minecraft/whitelist.json",
+            "/opt/minecraft/ops.json"
+        ]
+    },
+    "schedule": {
+        "repeat": true,
+        "intervals": [
+            {
+                "start": "2:00",
+                "stop": "3:59",
+                "backup": false
+            },
+            {
+                "start": "6:00",
+                "stop": "7:59",
+                "backup": false
+            },
+            {
+                "start": "10:00",
+                "stop": "11:59",
+                "backup": false
+            },
+            {
+                "start": "14:00",
+                "stop": "15:59",
+                "backup": false
+            },
+            {
+                "start": "18:00",
+                "stop": "19:59",
+                "backup": false
+            },
+            {
+                "start": "22:00",
+                "stop": "23:59",
+                "backup": true
+            }
+        ]
+    }
+}

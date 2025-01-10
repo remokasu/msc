@@ -62,7 +62,6 @@ show_help() {
 注意:
   - SSHセッションが切断されても継続動作させるためにnohupを使用
   - ステータス確認: $0 --config <file> --status
-  - プロセス停止: killall $(basename $0)
 EOF
 }
 
